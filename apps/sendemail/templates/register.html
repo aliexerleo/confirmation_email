@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+{% load static i18n %}
+
+
+{% block content %}
+   
+<div class="container">
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <div class="input-group mb-3 col-md-8 col-md-offset-2">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><strong>Fisrt Name</strong></span>
+            </div>
+            <input name="first_name" type="text" class="form-control" placeholder="first_name" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><strong>Last Name</strong></span>
+            </div>
+            <input name="last_name" type="text" class="form-control" placeholder="last_name" aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><strong>Username</strong></span>
+            </div>
+            <input name="username" type="text" class="form-control" placeholder="username" aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><strong>Email</strong></span>
+            </div>
+            <input name="email" type="text" class="form-control" placeholder="email" aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><strong>Password</strong></span>
+            </div>
+            <input name="password1" type="text" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><strong>Confirm Password</strong></span>
+            </div>
+            <input name="password2" type="text" class="form-control" placeholder="confirm" aria-label="Username" aria-describedby="basic-addon1">
+
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">SEND</button>
+        </div>
+
+    </form>    
+</div>
+
+{% endblock %}
